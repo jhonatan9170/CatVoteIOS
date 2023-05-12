@@ -48,7 +48,6 @@ class VotesTableViewController: UITableViewController {
     func getItems(){
         do{
             votes = try context.fetch(CatBreedCD.fetchRequest())
-
             self.tableView.reloadData()
         }catch{
             

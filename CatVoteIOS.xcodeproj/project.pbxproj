@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032D4D032A0F021700202538 /* PopUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D4D012A0F021700202538 /* PopUPViewController.swift */; };
+		032D4D042A0F021700202538 /* PopUPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032D4D022A0F021700202538 /* PopUPViewController.xib */; };
 		038AFD86282C6617002BB1A2 /* RemoteDataMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AFD85282C6617002BB1A2 /* RemoteDataMananger.swift */; };
 		038AFD88282C6887002BB1A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AFD87282C6887002BB1A2 /* HomeViewController.swift */; };
 		038AFD8B282C68D2002BB1A2 /* ResponseListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AFD8A282C68D2002BB1A2 /* ResponseListModel.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		032D4D012A0F021700202538 /* PopUPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUPViewController.swift; sourceTree = "<group>"; };
+		032D4D022A0F021700202538 /* PopUPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUPViewController.xib; sourceTree = "<group>"; };
 		038AFD85282C6617002BB1A2 /* RemoteDataMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataMananger.swift; sourceTree = "<group>"; };
 		038AFD87282C6887002BB1A2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		038AFD8A282C68D2002BB1A2 /* ResponseListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseListModel.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 		03B4F9B6282C64E800FF9A71 = {
 			isa = PBXGroup;
 			children = (
+				032D4D012A0F021700202538 /* PopUPViewController.swift */,
+				032D4D022A0F021700202538 /* PopUPViewController.xib */,
 				03B4F9C1282C64E800FF9A71 /* CatVoteIOS */,
 				03B4F9C0282C64E800FF9A71 /* Products */,
 			);
@@ -181,6 +187,7 @@
 				03B4F9CF282C64EB00FF9A71 /* LaunchScreen.storyboard in Resources */,
 				03B4F9CC282C64EB00FF9A71 /* Assets.xcassets in Resources */,
 				03B4F9CA282C64E800FF9A71 /* Main.storyboard in Resources */,
+				032D4D042A0F021700202538 /* PopUPViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				032D4D032A0F021700202538 /* PopUPViewController.swift in Sources */,
 				03B4F9C3282C64E800FF9A71 /* AppDelegate.swift in Sources */,
 				038AFD86282C6617002BB1A2 /* RemoteDataMananger.swift in Sources */,
 				03B4F9C5282C64E800FF9A71 /* SceneDelegate.swift in Sources */,

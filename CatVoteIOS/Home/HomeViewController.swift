@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var catsBreed:[CatBreed]=[]
+    var catsBreed:[CatBreed] = []
     
     @IBOutlet weak var CatsListTableView: UITableView!
     
@@ -60,19 +60,32 @@ extension HomeViewController:UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let story: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+       /* let story: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
         let new = story.instantiateViewController(withIdentifier: "detail") as! DetailViewController
 
         new.CatBredd = catsBreed[indexPath.row]
 
-        self.navigationController?.pushViewController(new, animated: true)
+        self.navigationController?.pushViewController(new, animated: true)*/
+        let popup = PopUPViewController()
+        popup.delegate = self
+        self.present(popup, animated: true)
        // performSegue(withIdentifier: "goDetail", sender: countrys[indexPath.row])
     }
     
-    
 }
 
+
+extension HomeViewController: PopUpDelegate {
+    func acceptButtonPressed() {
+        let story: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+         let votosVc = story.instantiateViewController(withIdentifier: "VotesTableViewControllerId") as! VotesTableViewController
+        
+        navigationController?.pushViewController(votosVc, animated: true)
+    }
+    
+}
 class CatTableViewCell: UITableViewCell {
     @IBOutlet weak var CatBreedLabel: UILabel!
     @IBOutlet weak var CatOriginLabel: UILabel!
