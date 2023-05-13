@@ -11,38 +11,22 @@ class HomeViewController: UIViewController {
     
     var catsBreed:[CatBreed]=[]
     
+    let viewModel = HomeViewModel()
+    
     @IBOutlet weak var CatsListTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Cats"
+        setupDelegates()
+        viewModel.getCats()
+    }
+    
+    func setupDelegates(){
         CatsListTableView.dataSource=self
         CatsListTableView.delegate=self
-        self.title = "Cats"
-        
-        HomeTask.doRequest(url:ConnectionParameters.endpointList,responsetype: [ResponseListModel].self, completion: { result in
-            switch result{
-            case .success(let Cats):
-                self.reloadData(with: Cats)
-            case .failure(let error):
-                print(error)
-            }
-        })
+        viewModel.delegate = self
     }
-    
-    func reloadData(with catResponse:[ResponseListModel]){
-        for catBreed in catResponse {
-            let newCatBreed = CatBreed(id: catBreed.id,
-                                       name: catBreed.name,
-                                       temperament: catBreed.temperament,
-                                       urlImage: catBreed.image?.url ?? "",
-                                       description: catBreed.description ,
-                                       origin: catBreed.origin)
-            catsBreed.append(newCatBreed)
-        }
-        CatsListTableView.reloadData()
-    }
-    
-
 
 }
 extension HomeViewController:UITableViewDataSource,UITableViewDelegate{
@@ -72,6 +56,20 @@ extension HomeViewController:UITableViewDataSource,UITableViewDelegate{
     
     
 }
+
+extension HomeViewController: HomeDelegate{
+    func didGetData(cats: [CatBreed]) {
+        
+        self.catsBreed = cats
+        CatsListTableView.reloadData()
+    }
+    
+    func error(error: Error) {
+        print("errores")
+    }
+
+}
+    
 
 class CatTableViewCell: UITableViewCell {
     @IBOutlet weak var CatBreedLabel: UILabel!

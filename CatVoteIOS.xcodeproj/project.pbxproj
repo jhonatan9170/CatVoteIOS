@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032D4D062A0F092900202538 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D4D052A0F092900202538 /* HomeViewModel.swift */; };
 		038AFD86282C6617002BB1A2 /* RemoteDataMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AFD85282C6617002BB1A2 /* RemoteDataMananger.swift */; };
 		038AFD88282C6887002BB1A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AFD87282C6887002BB1A2 /* HomeViewController.swift */; };
 		038AFD8B282C68D2002BB1A2 /* ResponseListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AFD8A282C68D2002BB1A2 /* ResponseListModel.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		032D4D052A0F092900202538 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		038AFD85282C6617002BB1A2 /* RemoteDataMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataMananger.swift; sourceTree = "<group>"; };
 		038AFD87282C6887002BB1A2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		038AFD8A282C68D2002BB1A2 /* ResponseListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseListModel.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				03B4F9D0282C64EB00FF9A71 /* Info.plist */,
 				03B4F9CD282C64EB00FF9A71 /* LaunchScreen.storyboard */,
 				038AFD8F282D6011002BB1A2 /* ImageExtension.swift */,
+				032D4D052A0F092900202538 /* HomeViewModel.swift */,
 			);
 			path = CatVoteIOS;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B4F9C3282C64E800FF9A71 /* AppDelegate.swift in Sources */,
+				032D4D062A0F092900202538 /* HomeViewModel.swift in Sources */,
 				038AFD86282C6617002BB1A2 /* RemoteDataMananger.swift in Sources */,
 				03B4F9C5282C64E800FF9A71 /* SceneDelegate.swift in Sources */,
 				038AFD90282D6011002BB1A2 /* ImageExtension.swift in Sources */,
